@@ -90,9 +90,7 @@ nav > ul {
 
 /* General sibling combinator */
 summary ~ p {
-  color: color(
-    srgb 1 0.75 0.8
-  ); /* predefined color space, values for color space*/
+  color: color(srgb 1 0.75 0.8); /* predefined color space, values for color space*/
 }
 
 /* Adjacent sibling combinator */
