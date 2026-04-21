@@ -1,47 +1,58 @@
-/* The bulk of your CSS should be included in an external CSS stylesheet, 
-but do include at least one example of inline and using the <style> 
-element for styling.  */
+/* universal selector in the <style> element */
 
 /* css variable for fallback */
 :root {
   --main-color: rgb(0, 0, 128); /* red, green, blue alpha values */
 }
 
-/* universal selector */
-* {
-  /* use google fonts here */
-}
-
 /* class selector */
 .title {
-    background-color: darkblue;     /* color name */
-    color: #FFFFFF;  /* hex code */
+  /* absolute unit cm */
+  padding: 0.5cm 0.5cm 0.5cm 0.5cm; /* padding short */
+  background-color: darkblue; /* color name */
+  color: #ffffff; /* hex code */
+  position: static; /* position static example */
 }
 
 /* element selector */
 h2 {
-    background-color: var(--main-color, maroon); /* fallback */
-    color: color-mix(in srgb, white 80%, darkblue 20%);  /*method to mix colors, values & percentages of color*/
+  /* padding long */
+  padding-left: 3mm; /* absolute unit mm */
+  padding-top: 3mm;
+  padding-bottom: 3mm;
+  background-color: var(--main-color, maroon); /* fallback */
+  color: color-mix(
+    in srgb,
+    white 80%,
+    darkblue 20%
+  ); /*method to mix colors, values & percentages of color*/
 }
 
 /* attribute selector */
 video[controls] {
-    /* box model */
+  /* sizing */
+  width: 40%; /* width */
+  height: 30%; /* height */
+  max-width: 500px;
+  min-width: 200px;
+  display: block; /* display block example */
+  margin-bottom: 10px;
 }
 
 /* id selector */
 #details {
-    /* box model */
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 /* selector list */
 ul, ol {
-  background-color: hsla(0, 79%, 72%, 1);   /* hue, saturation, lightness, alpha values */
+  background-color: hsla(0, 79%, 72%, 1); /* hue, saturation, lightness, alpha values */
 }
 
 /* Pseudo-class Selector  */
-button:hover{
-    cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
 
 /* Descendant combinator */
@@ -51,17 +62,21 @@ section p {
 
 /* Child combinator */
 nav > ul {
-  /* box model */
+  list-style-type: none;
+  padding: 10px;
+  position: absolute; /* position absolute example */
 }
 
 /* General sibling combinator */
 summary ~ p {
-  color: color(srgb 1 0.75 0.8);    /* predefined color space, values for color space*/
+  color: color(
+    srgb 1 0.75 0.8
+  ); /* predefined color space, values for color space*/
 }
 
 /* Adjacent sibling combinator */
 h3 + p {
-  /* box model */
+  margin-top: 0; /* margin long */
 }
 
 /* Combining two selectors */
@@ -70,8 +85,15 @@ h1.title {
 }
 
 /* :has() */
-section:has(video) {
-  /* box model border */
+section:has(ol) {
+  /* all border styling */
+  border-style: dashed;
+  border-width: 1px; /* absolute unit px */
+  border-color: black;
+  /* 3 relative units */
+  border-radius: 1em; /* relative unit em */
+  /* margin short */
+  margin: 2rem 10% 2rem 10%; /* relative unit % and rem*/
 }
 
 /* nested selectors */
@@ -85,4 +107,9 @@ form {
   & textarea {
     /* styling */
   }
+}
+
+.unfinished-business-text {
+  /* display none example */
+  display: none;
 }
