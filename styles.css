@@ -1,0 +1,88 @@
+/* The bulk of your CSS should be included in an external CSS stylesheet, 
+but do include at least one example of inline and using the <style> 
+element for styling.  */
+
+/* css variable for fallback */
+:root {
+  --main-color: rgb(0, 0, 128); /* red, green, blue alpha values */
+}
+
+/* universal selector */
+* {
+  /* use google fonts here */
+}
+
+/* class selector */
+.title {
+    background-color: darkblue;     /* color name */
+    color: #FFFFFF;  /* hex code */
+}
+
+/* element selector */
+h2 {
+    background-color: var(--main-color, maroon); /* fallback */
+    color: color-mix(in srgb, white 80%, darkblue 20%);  /*method to mix colors, values & percentages of color*/
+}
+
+/* attribute selector */
+video[controls] {
+    /* box model */
+}
+
+/* id selector */
+#details {
+    /* box model */
+}
+
+/* selector list */
+ul, ol {
+  background-color: hsla(0, 79%, 72%, 1);   /* hue, saturation, lightness, alpha values */
+}
+
+/* Pseudo-class Selector  */
+button:hover{
+    cursor: pointer;
+}
+
+/* Descendant combinator */
+section p {
+  /* text styling */
+}
+
+/* Child combinator */
+nav > ul {
+  /* box model */
+}
+
+/* General sibling combinator */
+summary ~ p {
+  color: color(srgb 1 0.75 0.8);    /* predefined color space, values for color space*/
+}
+
+/* Adjacent sibling combinator */
+h3 + p {
+  /* box model */
+}
+
+/* Combining two selectors */
+h1.title {
+  /* text styling */
+}
+
+/* :has() */
+section:has(video) {
+  /* box model border */
+}
+
+/* nested selectors */
+form {
+  & label {
+    /* styling */
+  }
+
+  & input,
+  & select,
+  & textarea {
+    /* styling */
+  }
+}
