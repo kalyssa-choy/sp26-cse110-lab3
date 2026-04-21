@@ -10,8 +10,15 @@
   /* absolute unit cm */
   padding: 0.5cm 0.5cm 0.5cm 0.5cm; /* padding short */
   background-color: darkblue; /* color name */
+  /* font color */
   color: #ffffff; /* hex code */
+  text-decoration: underline;   /* text decoration example */
   position: static; /* position static example */
+}
+
+/* Combining two selectors */
+h1.title {
+    text-align: center;   /* text align example */
 }
 
 /* element selector */
@@ -28,6 +35,10 @@ h2 {
   ); /*method to mix colors, values & percentages of color*/
 }
 
+img{
+    display: block; /* display block example */
+}
+
 /* attribute selector */
 video[controls] {
   /* sizing */
@@ -35,7 +46,6 @@ video[controls] {
   height: 30%; /* height */
   max-width: 500px;
   min-width: 200px;
-  display: block; /* display block example */
   margin-bottom: 10px;
 }
 
@@ -50,14 +60,20 @@ ul, ol {
   background-color: hsla(0, 79%, 72%, 1); /* hue, saturation, lightness, alpha values */
 }
 
-/* Pseudo-class Selector  */
+/* Pseudo-class and selector */
 button:hover {
   cursor: pointer;
+  background-color: darkgray;
+}
+
+/* pseudo class */
+button:active {
+  background-color: lightgreen;
 }
 
 /* Descendant combinator */
 section p {
-  /* text styling */
+    font-size: medium;
 }
 
 /* Child combinator */
@@ -79,11 +95,6 @@ h3 + p {
   margin-top: 0; /* margin long */
 }
 
-/* Combining two selectors */
-h1.title {
-  /* text styling */
-}
-
 /* :has() */
 section:has(ol) {
   /* all border styling */
@@ -99,13 +110,13 @@ section:has(ol) {
 /* nested selectors */
 form {
   & label {
-    /* styling */
+    font-weight: bold;
   }
 
   & input,
   & select,
   & textarea {
-    /* styling */
+    margin-top: 0.25rem;
   }
 }
 
