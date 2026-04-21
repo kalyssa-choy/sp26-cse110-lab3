@@ -1,3 +1,3 @@
-# Lab 2 - Starter
+# Lab 3
 
 [Meeting Minutes Page](https://kalyssa-choy.github.io/CSE110_Lab2/)
